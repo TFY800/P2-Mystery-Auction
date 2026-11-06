@@ -18,9 +18,9 @@ Mystery Auction gives players a short decision-making game about evaluating inco
 10. End after 10 rounds, or early when the player cannot afford the minimum legal opening bid. Record the final score once.
 11. Save only after a completed round. Persist the next round number, player and history. Resume without replaying settled rounds.
 
-## Requirement mapping (planned)
+## Requirement mapping (implemented)
 
-| Assignment requirement | Intended evidence |
+| Assignment requirement | Implemented evidence |
 | --- | --- |
 | Encapsulation | Private fields; validated constructors; controlled payment and bidding methods |
 | Abstraction | BiddingStrategy interface |
@@ -40,15 +40,19 @@ Mystery Auction gives players a short decision-making game about evaluating inco
 
 The assignment describes tests as optional in some sections but includes passing JUnit tests in the final submission package. This project will include tests.
 
-## Example interaction (planned)
+## Concrete rule choices
 
-```text
-Round 1 / 10 | Balance: $1,000
-Mystery item: sealed wooden case
-Size: medium | Weight: 8 kg
-Age clue: mid-20th century | Condition: worn
-Current bid: $80
-1. Raise by $20
-2. Enter a bid
-3. Withdraw
-```
+Opening bid $50; minimum increase $10. Each round has three participants with IDs
+0 (player), 1 and 2 (computers). Computers each have a $1,000 round budget. The game
+ends after ten results or when balance is below $50. Because generated resale is at
+least $116, the early-end branch is reserved for future lower-value templates.
+
+`GameRulesTest` checks domain rules, estimates, runtime strategy replacement, termination,
+settlement and sorting. `PersistenceTest` checks text round trips, replay validation,
+missing/corrupt files and score deduplication. `ConsoleTest` exercises menus, malformed
+input, overwrite confirmation and full sessions. See [verification](verification.md).
+
+The repository URL still needs to be shared with the instructor by TFY800; no instructor
+contact was supplied. This administrative action is outside the implemented game.
+
+For a real menu transcript and verified commands, see [README](../README.md).
