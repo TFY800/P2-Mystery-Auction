@@ -1,0 +1,25 @@
+# Build output
+/target/
+/build/
+/.gradle/
+*.class
+*.jar
+
+# IDE metadata
+/.idea/
+*.iml
+/.vscode/
+/.classpath
+/.project
+/.settings/
+
+# Local game data and logs
+/data/
+/saves/
+*.log
+
+# Local configuration and OS files
+.env
+.env.*
+.DS_Store
+Thumbs.db
