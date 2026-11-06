@@ -15,7 +15,7 @@
 - [x] Verify a clean checkout; document actual build/run/test commands.
 - [x] Update UML to match code; record final limitations.
 - [x] Select a license and add LICENSE.
-- [ ] Tag the completed version and publish release notes.
+- Release gate: publish v1.0.0 only after the checks in [verification](verification.md) pass; see GitHub Releases for current publication status.
 
 ## Workflow
 
