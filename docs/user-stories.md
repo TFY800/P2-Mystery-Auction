@@ -1,6 +1,6 @@
 # User Stories
 
-All stories below are planned, not implemented.
+All eight stories are implemented. Acceptance is verified by `GameRulesTest`, `PersistenceTest` and `ConsoleTest`; see [verification](verification.md).
 
 ## US-01: Start a game
 
